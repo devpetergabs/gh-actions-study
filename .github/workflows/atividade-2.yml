@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World Step
-        run: "Esta é a atividade 1"
+        run: echo "Esta é a atividade 1"
 
   windows:
 
@@ -24,7 +24,7 @@ jobs:
     steps:
 
       - name: Execucao do job Windows
-        run: echo "E essa atvidade 2 -" ${{ github.event.inputs.job_id}}
+        run: echo E essa atvidade 2 - ${{ github.event.inputs.job_id}}
 
   ubuntu:
 
@@ -33,6 +33,6 @@ jobs:
     steps:
 
       - name: Execucao do job Ubuntu
-        run: echo "E essa atvidade 2 -" ${{ github.event.inputs.job_id}}
+        run: echo E essa atvidade 2 - ${{ github.event.inputs.job_id}}
 
   
