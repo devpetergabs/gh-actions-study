@@ -1,4 +1,4 @@
-name: jobs_input
+name: Atividade 02 — Execução por job (input)
 
 on: 
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
     steps:
 
       - name: Execucao do job Windows
-        run: echo ${{ github.event.inputs.job_id}}
+        run: echo os.get.runner.os
 
   ubuntu:
     # The type of runner that the job will run on
