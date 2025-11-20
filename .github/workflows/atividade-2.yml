@@ -24,6 +24,7 @@ jobs:
     steps:
 
       - name: Execucao do job Windows
+        shell: bash
         run: echo E essa atvidade 2 - ${{ github.event.inputs.job_id}}
 
   ubuntu:
