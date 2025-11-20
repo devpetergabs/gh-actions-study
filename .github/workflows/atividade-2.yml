@@ -1,0 +1,29 @@
+name: jobs_input
+
+on: 
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: 'Em qual job rodar'
+        required: false
+        default: 'Windows'
+
+jobs:
+
+  windows:
+    # The type of runner that the job will run on
+    if: ${{ github.event.inputs.job_id == 'Windows' }}
+    runs-on: windows-latest
+    steps:
+
+      - name: Execucao do job Windows
+        run: echo ${{ github.event.inputs.job_id}}
+
+  ubuntu:
+    # The type of runner that the job will run on
+    if: ${{ github.event.inputs.job_id == 'Ubuntu' }}
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Execucao do job Ubuntu
+        run: echo ${{ github.event.inputs.job_id}}
